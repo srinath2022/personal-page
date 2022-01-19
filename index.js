@@ -103,6 +103,21 @@ $(document).ready(function() {
                   },
 
                   {
+                    "topic": "Machine Learning",
+                    "courses": [{
+                        "title" : "Intro to ML",
+                        "author": "Kai-Wei-Chang",
+                        "source": "IntroToML-compressed.pdf"
+                      },
+                      {
+                        "title" : "Understanding ML, From Theory to Algorithms",
+                        "author": "Shwartz, David",
+                        "source": "UnderstandingML_Shwartz.pdf"
+                      }
+                    ]
+                  },
+
+                  {
                     "topic": "Computer Architecture",
                     "courses": [{
                         "title" : "Digital Logic Design",
