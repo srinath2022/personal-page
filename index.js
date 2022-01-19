@@ -38,16 +38,6 @@ $(document).ready(function() {
                   },
 
                   {
-                    "topic": "Data Analytics & Statistics",
-                    "courses": [{
-                        "title" : "Pattern Classification",
-                        "author": "Duda",
-                        "source": "PatternClassification_Duda.pdf"
-                      }
-                    ]
-                  },
-
-                  {
                     "topic": "Networks & Security",
                     "courses": [{
                         "title" : "Computer Networks A System Approach",
@@ -88,7 +78,7 @@ $(document).ready(function() {
                   },
 
                   {
-                    "topic": "Artificial Intelligence & ML",
+                    "topic": "Artificial Intelligence",
                     "courses": [{
                         "title" : "Artificial Intelligence A Modern Approach",
                         "author": "",
@@ -103,7 +93,7 @@ $(document).ready(function() {
                   },
 
                   {
-                    "topic": "Machine Learning",
+                    "topic": "Machine Learning & Statistics",
                     "courses": [{
                         "title" : "Intro to ML",
                         "author": "Kai-Wei-Chang",
@@ -113,6 +103,11 @@ $(document).ready(function() {
                         "title" : "Understanding ML, From Theory to Algorithms",
                         "author": "Shwartz, David",
                         "source": "UnderstandingML_Shwartz.pdf"
+                      },
+                      {
+                        "title" : "Pattern Classification",
+                        "author": "Duda",
+                        "source": "PatternClassification_Duda.pdf"
                       }
                     ]
                   },
