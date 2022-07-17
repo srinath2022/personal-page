@@ -9,88 +9,159 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <script language="javascript"  src="./static/js/jquery-1.4.2.min.js"></script>
-  <script id="demo" type="text/javascript" src="./index.js"></script>
 </head>
-
 <body>
 
-<header>
-  <div class="w3-content" style="max-width:1400px;">
-    <table class="s3-table">
-      <tr class="s3-card s3-full">
-            <div class="btn-group navigation-buttons">
-              <button>
-                <a href="index.html">Home</a>
-              </button>
-              <button>
-                <a href="programming.html">Programming</a>
-              </button>
-              <button>
-                <a href="./static/pdfs/srinath_cv.pdf">CV</a>
-              </button>
-            </div>
-        </tr>
-    </table>
-  </div>
-</header>
 
 <!-- Page Container -->
 <div class="w3-content" style="max-width:1400px;">
 
   <div class="s3-row-padding">
-    <!-- The Grid -->
-    <table class="s3-table">
-      <tr>
-        <td class="s3-card s3-third">
-          <!-- Left Column -->
-              <div class="s3-image-container">
-                <img src="./static/images/2.jpg" class="s3-image">
-              </div>
+    <div style="width: 50%;float: left; text-align: right;">
+      <div class="s3-image-container">
+        <img src="./static/images/2.jpg" class="s3-image">
+      </div>
 
-              <div class="w3-container">
-                <h3><b>Srinath Naik</b></h3>
-                <div class="content">
-                  <p>Master's in Computer Science - Expected Dec 2022.<br>
-                  University of California Los Angeles(UCLA)</p>
-                </div>
+      <div class="w3-container">
+        <h3><b>Srinath Naik</b></h3>
+        <div class="content">
+          <em>Master's in Computer Science - Expected Dec 2022.<br>
+          University of California Los Angeles(UCLA)</em>
+        </div>
 
-                <h3><b>Interests</b></h3>
-                <div class="content"><p>Anything which stimulates some thought!!. Broadly interested in Machine Learning, Computer Vision, Artificial Intelligence and their applications into Robotics.</p></div>
+        <h5><b><i>Interests</i></b></h5>
+        <div class="content">
+          <em>Anything which stimulates some thought :) Broadly interested in Machine Learning,<br>
+           Computer Vision, Artificial Intelligence and their applications into Robotics.</em>
+        </div>
 
 
-                <h3><b>Contact</b></h3>
-                <div class="content">
-                  <p>srinath(at)cs(dot)ucla(dot)edu</p>
-                </div>
-              </div>
-          <!-- End Left Column -->
-        </td>
+        <h5><b><i>Contact</i></b></h5>
+        <div class="content">
+          <em>srinath(at)cs(dot)ucla(dot)edu</em>
+        </div>
+      </div>
+    </div>
 
-        <td class="s3-card s3-twothird">
-          <!-- Right Column -->
-              <div class="quote">
-                <h6 class="quote-content">
-                  "It's better to live your own destiny imperfectly than to live an imitation of somebody else's life with perfection"
-                </h6>
-                <!-- <h5 class="quote-author">- The Bhagavad Geeta</h5> -->
-              </div>
+    <div style="width: 50%; float: right;">
+      <div style="padding: 25%; padding-left: 10px; padding-bottom: 5%;">
+        <div class="link-button">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="link-button">
+          <a href="resources.html">Resources</a>
+        </div>
+        <div class="link-button">
+          <a href="teaching.html">Teaching Apprenticeships</a>
+        </div>
+        <div class="link-button">
+          <a href="programming.html">Programming</a>
+        </div>
+        <div class="link-button">
+          <a href="./static/pdfs/srinath_cv.pdf">CV</a>
+        </div>
+      </div>
+    </div>
 
-              <h2 class="heading"><b>A Mini Library</b></h2>
+  </div>
 
-              <div id="miniLibrary"></div>
-             
-          <!-- End Right Column -->
-        </td>
-      </tr>
-    </table>
-  <!-- End Grid -->
+  <hr>
+
+  <div class="s3-row-padding">
+      <div class="w3-container">
+        <h3><b>Projects</b></h3>
+
+        <div style="width: 100%; overflow: hidden;">
+          <div  style="width: 25%; float:right;">
+            <img src="./static/images/desnownet.png" class="s3-image-project">
+          </div>
+          <div class="project-card alpha" style="width: 70%;float:left;">
+            <h5 class="alpha" style="color:violet;"><b><i>DeSnowNet : Context-Aware Deep Network for Snow Removal</i></b></h5>
+            <div class="description">
+              <p class="alpha">
+                This work aims to implement a paper on de-snowing and suggest potential improvements and future directions. The proposed method uses modular neural network and handles various scales of snow particles by using large receptive fields based on dilated convolutions. It also presents results obtained by training on a reduced dataset and light-weight network.
+              </p>
+            </div>
+            <b style="color: lightblue;"> - Srinath Naik Ajmeera</b><br>
+            <u><b><a href="./static/projects/DeSnowNetImplementationReportCVPRFormat.pdf" style="color: deepskyblue; ">- Link to Project Report</a></b></u>
+          </div>
+        </div>
+
+        <div style="width: 100%; overflow: hidden;">
+          <div  style="width: 25%; float:left;">
+            <img src="./static/images/reprojection.png" class="s3-image-project">
+          </div>
+          <div class="project-card alpha" style="width: 70%;float:right;">
+            <h5 style="color:indigo;"><b><i>Static ORB Extractor for Visual SLAM</i></b></h5>
+            <div class="description">
+              <p class="alpha">
+                Despite significant progress in development of feature based visual SLAM systems, they exhibit poor performance when dynamic objects are present in the scene. This under performance can be attributed to using all the extracted feature points for location and pose estimation irrespective of whether they correspond to static/dynamic objects. In presence of dynamic objects, the calculated projection matrix to map from one frame to the next will be inaccurate due to excessive shift of features, there by leading to poor estimation. In this paper, we propose Reprojection Error Map for finding the dynamic mask in the scene uing the ORB keypoint correspondences. We describe the three methodologies we have developed for this task and their drawbacks. Finally, we present evaluation of our approaches on dynamic object based scenes in TUM and KITTI datasets.
+              </p>
+            </div>
+            <b style="color: lightblue;"> - Chethan Chinder Chandrappa, Srinath Naik Ajmeera</b><br>
+            <u><b><a href="./static/projects/ECE209AS_Project_SORBE_SLAM.pdf" style="color: deepskyblue; ">- Link to Project Report</a></b></u>
+          </div>
+        </div>
+
+        <div style="width: 100%; overflow: hidden;">
+          <div  style="width: 25%; float:right;">
+            <img src="./static/images/comp2.png" class="s3-image-project">
+          </div>
+          <div class="project-card alpha" style="width: 70%;float:left;">
+            <h5 class="alpha" style="color:blue;"><b><i>Script to 3D Animation</i></b></h5>
+            <div class="description">
+              <p class="alpha">
+                Artificial synthesis of human facial models continues to be an active area of research, sitting at the intersection of Computer Vision, Computer Graphics and Artificial Life. Spanning across various fields from medicine to film, the key task remains generating expressive and accurate three- dimensional renderings of human faces. Interestingly, facial synthesis has also seen active interest in the two-dimensional domain, with an increasing use of Generative Adversarial Network (GANs) to generate and manipulate human face renderings. This project thus attempts to take a step towards combining the research in these various disciplines, integrating the fields of Natural Language Processing, 2-D text guided manipulation, and 3-D model capture and rendering. Specifically, this project attempts to create a “text-to-3D-model” pipeline, generating three-dimensional faces to convey the emotion carried by a piece of text.
+              </p>
+            </div>
+            <b style="color: lightblue;"> - Diplav, Sonia Jaiswal, Arunachalam Chidambaram, Tanmay Sanjay Hukkeri, Srinath Naik Ajmeera</b><br>
+            <u><b><a href="./static/projects/CS_275_Project_Report____Script_to_3D_Model_.pdf" style="color: deepskyblue; ">- Link to Project Report</a></b></u>
+          </div>
+        </div>
+
+        <div style="width: 100%; overflow: hidden;">
+          <div  style="width: 25%; float:left;">
+            <img src="./static/images/fig2.png" class="s3-image-project">
+          </div>
+          <div class="project-card alpha" style="width: 70%;float:right;">
+            <h5 style="color:green;"><b><i>Sentiment Analysis on Twitter Data</i></b></h5>
+            <div class="description">
+              <p class="alpha">
+                Sentiment analysis, the task of identifying the sentiment underlying a selection of text, is a classically challenging natural language processing (NLP) task. This task is difficult for both machines and humans in many cases. For example, in the case of written text, it is challenging to determine an author’s sentiment given that intonation is not represented well in written text. Sentiment analysis therefore serves as a suitably rigorous benchmark for determining a system’s capability to reason about ideas conveyed through text that are not readily evident from only the vocabulary used. This task also has numerous application areas and is especially useful for downstream tasks such as determining potential consumers’ overall attitudes towards and intentions regarding a particular product or service. In this project, we undertake the task of defining a model architecture for sentiment analysis, training it on a domain-specific corpus, and analyzing its ability to identify sentiment in the training domain and in several others.
+              </p>
+            </div>
+            <b style="color: lightblue;"> - Sanjeev Venkatesan, Jakob Didio, Yiyou Chen, Srinath Naik Ajmeera</b><br>
+            <u><b><a href="./static/projects/CS260C_Project_Report.pdf" style="color: deepskyblue; ">- Link to Project Report</a></b></u>
+          </div>
+        </div>
+
+        <div style="width: 100%; overflow: hidden;">
+          <div  style="width: 25%; float:right;">
+            <img src="./static/images/mode_collapse.png" class="s3-image-project">
+          </div>
+          <div class="project-card alpha" style="width: 70%;float:left;">
+            <h5 class="alpha" style="color:#F6BE00;"><b><i>Mode Collapse In Generative Adversarial Networks: A Survey</i></b></h5>
+            <div class="description">
+              <p class="alpha">
+                Generative models have progressed a long way into the history of machine learning. Broadly, these can be classified into explicit models where a potential probability distribution of the samples is calculated and implicit models in which the interaction is only through sampling. Though Generative Adversarial Networks are widely successful, there are some inherent problems such as non-convergence and mode collapse which limit its usage. In this paper, we focus on mode collapse in detail, address why it is a bottleneck on effectiveness and usage of GANs, discuss and summarize the different strategies in the literature followed by identifying open research directions.
+              </p>
+            </div>
+            <b style="color: lightblue;"> - Diplav, Gaurav Singh, Srinath Naik Ajmeera</b><br>
+            <u><b><a href="./static/projects/CS260_Course_Project_Report_.pdf" style="color: deepskyblue; ">- Link to Project Report</a></b></u>
+          </div>
+        </div>
+
+        <div class="quote">
+          <b>"It's better to live your own destiny imperfectly than to live an imitation of somebody else's life with perfection."</b>
+        </div>
+      </div>
   </div>
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-center w3-white w3-padding-16">
+<!-- <footer class="w3-center w3-white w3-padding-16">
   <p><b>"Science is organised knowledge. Wisdom is organised life."</b></p>
-</footer>
+</footer> -->
 
 </body>
 </html>

@@ -1,9 +1,11 @@
 
 html,body,h1,h2,h4,h5,h6 {font-family: "Helvetica"}
 
+h5{color:#696969;}
 h4{color:#696969;}
 h3{color:#000000;}
 p{color:#2F4F4F; }
+em{color:#2F4F4F; }
 li{color:#2F4F4F;}
 
 .column {
@@ -17,13 +19,9 @@ li{color:#2F4F4F;}
 }
 
 .quote {
-    margin-right:5%;
-    margin-left:5%;
-    margin-top:0;
-    margin-bottom:2%;
-    position: center;
-    color: dodgerblue;
-    font-style: italic;
+    color: lightseagreen;
+    padding:10px; 
+    text-align: center;
 }
 
 .quote-content {
@@ -36,19 +34,11 @@ li{color:#2F4F4F;}
 
 a:link {
     text-decoration: none;
-    color: #708090;
+    color: dodgerblue;
     font-style: italic;
 }
 
 a:hover {
-    color: blue;
-}
-
-a:visited {
-    color: #A05916;
-}
-
-a:active {
     color: blue;
 }
 
@@ -98,13 +88,17 @@ a:active {
 }
 
 .s3-card {
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
 .s3-image-container {
-    margin-top: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 20%;
+    max-height: 20%;
 }
+
 
 .s3-table {
     width: 100%;
@@ -112,4 +106,48 @@ a:active {
 
 .s3-image {
     width: 100%;
+    border-radius: 50%;
 }
+
+.s3-image-project {
+    padding-top: 10%;
+    width: 100%;
+}
+
+.project-card {
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+    margin : 10px;
+    float: right;
+}
+
+.alpha {
+    background-color: transparent;
+}
+
+.beta {
+    background-color: #696969;
+    color: white;
+}
+
+.description {
+    padding-left: 10px;
+    color: whitesmoke;
+}
+
+.link-button {
+    padding: 10px; 
+    border-bottom: 1px solid  #ff0;
+    font-weight: bold;
+}
+
+.left-topic {
+    text-align: right;
+}
+
+.right-topic {
+    padding-left: 10px;
+}
+
