@@ -151,3 +151,7 @@ a:hover {
     padding-left: 10px;
 }
 
+table td, table td * {
+    vertical-align: top;
+}
+
