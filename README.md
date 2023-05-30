@@ -12,8 +12,9 @@ To host some personal and educational info :
   - Leveraged advanced technologies including Android development, Dagger, and Java, while also managing complex parallel image processing pipelines and working closely with physical hardware (Amazon One) devices.
   - Demonstrated strong technical skills, exceptional attention to detail, and a deep understanding of the latest deep learning techniques and computer vision principles, resulting in a highly successful Xray module implementation for Amazon One.
 
-
 ### Software Deveopment Engineer (L4) | Bangalore, India | April 2021 - August 2021 (4 months)
+  - Worked on design & solutioning(HLD, LLD) of ’Serial Scan’ project - which enables serial number regex/deep validation of products at various stages of shipping/returns journey.
+  - Contributed to design (HLD) for ’Same Day Resolution’ project - to display a card on detail page of Amazon.in regarding availability of same day resolution/technician visit for the product.
 
 ## Apple
 ### Software Development Engineer | Identity Management Services (IdMS) | Hyderabad, India | June 2018 - Feb 2020 (1 year, 8 months)
