@@ -17,6 +17,7 @@ Tensor parallelism
 Pipeline parallelism
 
 LoRA - https://arxiv.org/pdf/2106.09685
+- 
 
 Speculative Decoding
  - https://pytorch.org/blog/hitchhikers-guide-speculative-decoding/
@@ -29,18 +30,36 @@ Chunked Prefill
 Prefix/Prompt Caching
 
 
-Quantiztion
+Quantization
+- https://huggingface.co/docs/transformers/en/quantization/overview
 - AWQ?
-- weight quantization? activation quantization?
+- weight quantization? activation quantization? GPTQ?, bitsandbytes
 - FP16, BF16?
-- 
 
 ## Jargon
-NCCL ? - 
+**NCCL (NVIDIA Library)**
+NCCL (NVIDIA Collective Communications Library) is a library developed by NVIDIA to accelerate multi-GPU and multi-node training in deep learning and other parallel computing applications. It is designed to provide high-performance communication primitives optimized for NVIDIA GPUs, allowing efficient data transfer and synchronization across multiple GPUs.
+
+All-Reduce: Aggregates data across GPUs (e.g., sum, max).   
+Broadcast: Distributes data from one GPU to all others.   
+Reduce: Aggregates data to a single GPU.   
+All-Gather: Gathers data from all GPUs into all GPUs.   
+Reduce-Scatter: Combines reduce and scatter operations.   
 
 
 ## Python Libraries
 vllm - LLM, SamplingParams
+LLMs - AutoModelForCausalLM, 
 transformers - AutoTokenizer
 bitsandbytes, #Quantization
 lm_eval, #Evaluation
+pytorch
+- Post-training : AutoGPTQ
+- Quantization Aware Training QAT : bitsandbytes
+
+
+# TO-DO
+CUDA
+- https://blogs.nvidia.com/blog/what-is-cuda-2/
+- https://pytorch.org/docs/stable/notes/cuda.html
+- 
