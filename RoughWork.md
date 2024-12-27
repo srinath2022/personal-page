@@ -1,5 +1,22 @@
 # Rough Work
 
+## ML
+
+**Losses**
+
+  - Focal loss
+  - Class balanced loss   
+
+### Relevant python libraries
+
+  1. *numpy*
+      - np.array, arr.copy(), arr.dtype, arr.astype(np.float32), np.nan, np.inf, arr.shape, np.ones((2, 3)), np.zeros(4), np.zeros_like(arr), np.ones_like(arr, dtype=np.int32) 
+      - np.arange(a, b), np.linspace(a, b, num=k, dtype=np.float32), np.reshape(arr, (m, n)), arr.flatten(), np.transpose(arr, axes=(1, 2, 0))
+      - np.exp, np.exp2, np.log, np.log2, np.e, np.pi, np.power(3, arr), np.matmul(arr1, arr2)
+      - np.random.randint(-3, high=14, size=(2, 2)), np.random.seed(9), np.random.shuffle(matrix), np.random.uniform(), np.random.normal(), np.random.choice(colors)
+      - np.argmin, np.argmax, np.isnan(arr), np.where(arr!=3), np.where(np_filter, positives, negatives), np.any, np.all, arr.min(), arr.max()
+      - np.mean(arr), np.var(arr), np.median(arr), np.sum(arr), np.cumsum(arr), np.concatenate([arr1, arr2]), np.save('arr.npy', arr), np.load('file') 
+
 ## GPUs, VLLM
 
 Know GPU info
