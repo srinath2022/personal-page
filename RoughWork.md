@@ -18,8 +18,14 @@
       - *np.mean(arr), np.var(arr), np.median(arr), np.sum(arr), np.cumsum(arr), np.concatenate([arr1, arr2]), np.save('arr.npy', arr), np.load('file')*
     
   2. **pandas**
-     - hh
-     - 
+     - pd.DataFrame(), df.append(ser, ignore_index=), df.drop(index='r2', columns='c2'), df.iloc[1], df.loc['r2','c3'], df.groupby('col'), df.multiply([1000, 1], axis=0)
+     - pd.Series(arr, dtype=, index=), pd.concat([df1, df3], axis=1), pd.merge(df1, df2)
+     - df = pd.read_csv('data.csv'), pd.read_excel('data.xlsx'), pd.read_json('data.json', orient='index'), df.to_csv, df.to_excel, df.to_json.
+     - df['playerID'].str.startswith('c'), .str.endswith, .str.contains, df['col'].isin([..]), .isna(), .notna(), df.sort_values('col')
+     - df.describe() - statistics, df['col'].value_counts(), df['col'].unique()
+    
+  3. **matplotlib**
+     - pyplot : 
 
 ## GPUs, VLLM
 
