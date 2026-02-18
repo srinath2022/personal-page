@@ -1,32 +1,22 @@
 # personal-page
-https://web.cs.ucla.edu/~srinath   
+https://github.com/srinath2022/personal-page
 
 To host some personal and educational info : 
 
 # Professional Experience
 ## Amazon
-### Software Deveopment Engineer (L4) | Amazon One | Seattle, USA | 24 April 2023 - Present
+### Software Deveopment Engineer | Amazon One | Seattle, USA | 24 April 2023 - Present
 ### SDE Intern | Amazon One | Seattle, USA | June 2022 - September 2022 (3 months)
   - Spearheaded the design and development of a crucial Xray module for Amazon One, a state-of-the-art device that utilizes hand scanning technology for user recognition and payment.
   - Developed a user-friendly, intuitive transcript summary of all interactions and key events during a user session, enabling faster identification of issues and more efficient root cause analysis
   - Leveraged advanced technologies including Android development, Dagger, and Java, while also managing complex parallel image processing pipelines and working closely with physical hardware (Amazon One) devices.
   - Demonstrated strong technical skills, exceptional attention to detail, and a deep understanding of the latest deep learning techniques and computer vision principles, resulting in a highly successful Xray module implementation for Amazon One.
 
-### Software Deveopment Engineer (L4) | Bangalore, India | April 2021 - August 2021 (4 months)
-  - Worked on design & solutioning(HLD, LLD) of ’Serial Scan’ project - which enables serial number regex/deep validation of products at various stages of shipping/returns journey.
-  - Contributed to design (HLD) for ’Same Day Resolution’ project - to display a card on detail page of Amazon.in regarding availability of same day resolution/technician visit for the product.
-
 ## Apple
 ### Software Development Engineer | Identity Management Services (IdMS) | Hyderabad, India | June 2018 - Feb 2020 (1 year, 8 months)
   - Successfully managed the Registration, Access Management & Provisioning (RAMP) platform, overseeing a set of critical applications responsible for granting and managing access to a wide range of Apple's applications.
   - Collaborated closely with business teams to design and implement new features and flows within the RAMP system, ensuring seamless user experience and optimal functionality.
   - Demonstrated exceptional technical skills in Java, Spring, Spring-boot, Elastic search, and OracleDB, ensuring the smooth operation and maintenance of the RAMP platform.
-
-# Startup Experience
-## EMPTYMINDS AI
-### Architect and Chief Develper | March 2020 - March 2021 (1 year)
-
-# Independent Research Projects
 
 # Academic Projects
 ## UCLA
@@ -61,5 +51,3 @@ To host some personal and educational info :
   - Developed a limited speech command classifier using Convolutional Neural Networks (CNNs) on spectrograms of one-second long custom commands collected from multiple sources, and integrated the classifier into a mobile application for custom voice capture.
   - Pioneered a novel method for automatically extracting single-page images of the left and right portions from captured two-page images of a book, leveraging a pre-trained Neural Network model and a de-curling engine to achieve high-quality, flat pages for improved Optical Character Recognition (OCR).
   - Employed a pre-trained Neural Network model to build a de-curling engine to flatten the curved single-page images, resulting in improved OCR performance.
-
-# Independent Product Projects
