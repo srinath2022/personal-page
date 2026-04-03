@@ -1,119 +1,99 @@
 <!DOCTYPE html>
-<html>
-<title>TA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./static/css/index.css">
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching · Srinath Naik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
 <body>
 
-<div class="w3-content" style="max-width:1400px;">
-  <div class="s3-row-padding">
-    <div style="width: 50%;float: left; text-align: right;">
-      <div class="s3-image-container">
-        <img src="./static/images/teaching.jpeg" class="s3-image">
-      </div>
-
-      <div class="w3-container">
-        <h3><b>TA Material</b></h3>
-        <div class="content">
-          <em>This is the place for all my TA related stuff,<br>
-          covering slides and other material.</em>
-        </div>
-      </div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Srinath Naik</a>
+    <button class="hamburger" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#contact">Contact</a>
+      <div class="nav-sep"></div>
+      <a href="resources.html">Resources</a>
+      <a href="teaching.html">Teaching</a>
+      <div class="nav-sep"></div>
+      <a href="https://github.com/srinath2022" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/srinath-naik-ajmeera-805784197/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-
-    <div style="width: 50%; float: right;">
-      <div style="padding: 25%; padding-left: 10px; padding-bottom: 5%;">
-        <div class="link-button">
-          <a href="index.html">Home</a>
-        </div>
-        <div class="link-button">
-          <a href="resources.html">Resources</a>
-        </div>
-        <div class="link-button">
-          <a href="teaching.html">TA Material</a>
-        </div>
-        <div class="link-button">
-          <a href="programming.html">Programming</a>
-        </div>
-        <div class="link-button">
-          <a href="./static/pdfs/srinath_cv.pdf">CV</a>
-        </div>
-      </div>
-    </div>
-
   </div>
+</nav>
 
-  <hr>
-
-  <table style="margin:auto;">
-    <tr>
-      
-      <!-- <td>
-        <div>
-          <h5> CS32 Spring 2022</h5>
-          <ul>
-            <li><a href="./static/teaching/s22_cs32/CS32 Week1 Discussion 1I.pdf">Week1 : Constructors, Compiling</a></li>
-            <li><a href="./static/teaching/s22_cs32/CS32 Week2 Discussion.pdf">Week2 : Destructor, Copy Constructor, Assignment Operator</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week3 Discussion 1I-compressed.pdf">Week3 : Linked List</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week4 Discussion 1I.pdf">Week4 : Stack, Queue</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week5 Discussion 1I.pdf">Week5 : Inheritance, Polymorphism, Recursion</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week6 Discussion 1I.pdf">Week6 : Templates, Standard Templates Library (STL)</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week7 Discussion 1I.pdf">Week7 : Algorithm Analysis, Sorting</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week8 Discussion 1I.pdf">Week8 : Trees, Binary Search Trees (BST)</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week9 Discussion 1I.pdf">Week9 : Hash Tables</a></li>
-            <li><a href="./static/teaching/s22_cs32/Week10 Discussion 1I.pdf">Week10 : Heaps, Priority Queues</a></li>
-          </ul>
-        </div>
-      </td> -->
-
-      <td>
-        <div>
-          <h5> CS31</h5>
-          <ul>
-            <li><a href="./static/teaching/f22_cs31/Week1 Discussion 2E.pdf">Week1 : Compilation Error, Logic Error</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week2 Discussion 2E.pdf">Week2 : Strings, If Statements, Operators</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week3 Discussion 2E.pdf">Week3 : Switch, Loops, Character</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week4 Discussion 2E.pdf">Week4 : Functions</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week5 Discussion 2E.pdf">Week5 : Arrays</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week6 Discussion 2E.pdf">Week6 : C-Strings</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week8 Discussion 2E.pdf">Week7-8 : Pointers, Structs & Classes</a></li>
-            <li><a href="./static/teaching/f22_cs31/Week10 Discussion 2E.pdf">Week9-10 : Review</a></li>
-          </ul>
-        </div>
-      </td>
-
-      <td>
-        <div>
-          <h5>CS32 Winter 2023</h5>
-          <ul>
-            <li><a href="./static/teaching/w23_cs32/Week1 Discussion 2E.pdf">Week1 : Constructors, Include Guard, Circular Dependency</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week2 Discussion 2E.pdf">Week2 : Destructor, Copy Constructor, Assignment Operator</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week3 Discussion 2E.pdf">Week3 : Linked Lists</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week4 Discussion 2E.pdf">Week4 : Stacks, Queues</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week5 Discussion 2E.pdf">Week5 : Inheritance, Polymorphism, Recursion</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week6 Discussion 2E.pdf">Week6 : Templates, STL</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week7 Discussion 2E.pdf">Week7 : Algo Analysis, Sorting</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week8 Discussion 2E.pdf">Week8 : Trees, BST</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week9 Discussion 2E.pdf">Week9 : Hash Tables</a></li>
-            <li><a href="./static/teaching/w23_cs32/Week10 Discussion 2E.pdf">Week10 : Heaps, Priority Queues</a></li>
-          </ul>
-        </div>
-      </td>
-
-    </tr>
-  </table>
-
-  <div class="quote">
-    <b>"Teaching is the best way to learn something."</b>
+<div class="page-header">
+  <div class="inner">
+    <h1>Teaching</h1>
+    <p>Discussion slides from TA sections at UCLA — COM SCI 31 &amp; 32 (Introduction to Computer Science I &amp; II, C++).</p>
   </div>
-
 </div>
 
+<div class="teaching-content">
+  <div class="inner">
+
+    <div class="teaching-group">
+      <h3>CS 31 &mdash; Fall 2022</h3>
+      <ul>
+        <li><a href="./static/teaching/f22_cs31/Week1 Discussion 2E.pdf">Week 1: Compilation Error, Logic Error</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week2 Discussion 2E.pdf">Week 2: Strings, If Statements, Operators</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week3 Discussion 2E.pdf">Week 3: Switch, Loops, Character</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week4 Discussion 2E.pdf">Week 4: Functions</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week5 Discussion 2E.pdf">Week 5: Arrays</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week6 Discussion 2E.pdf">Week 6: C-Strings</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week8 Discussion 2E.pdf">Week 7&ndash;8: Pointers, Structs &amp; Classes</a></li>
+        <li><a href="./static/teaching/f22_cs31/Week10 Discussion 2E.pdf">Week 9&ndash;10: Review</a></li>
+      </ul>
+    </div>
+
+    <div class="teaching-group">
+      <h3>CS 32 &mdash; Spring 2022</h3>
+      <ul>
+        <li><a href="./static/teaching/s22_cs32/CS32 Week1 Discussion 1I.pdf">Week 1: Constructors, Compiling</a></li>
+        <li><a href="./static/teaching/s22_cs32/CS32 Week2 Discussion.pdf">Week 2: Destructor, Copy Constructor, Assignment Operator</a></li>
+        <li><a href="./static/teaching/s22_cs32/CS32 Week3 Discussion-compressed.pdf">Week 3: Linked List</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week4 Discussion 1I.pdf">Week 4: Stack, Queue</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week5 Discussion 1I.pdf">Week 5: Inheritance, Polymorphism, Recursion</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week6 Discussion 1I.pdf">Week 6: Templates, STL</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week7 Discussion 1I.pdf">Week 7: Algorithm Analysis, Sorting</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week8 Discussion 1I.pdf">Week 8: Trees, Binary Search Trees</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week9 Discussion 1I.pdf">Week 9: Hash Tables</a></li>
+        <li><a href="./static/teaching/s22_cs32/Week10 Discussion 1I.pdf">Week 10: Heaps, Priority Queues</a></li>
+      </ul>
+    </div>
+
+    <div class="teaching-group">
+      <h3>CS 32 &mdash; Winter 2023</h3>
+      <ul>
+        <li><a href="./static/teaching/w23_cs32/Week1 Discussion 2E.pdf">Week 1: Constructors, Include Guard, Circular Dependency</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week2 Discussion 2E.pdf">Week 2: Destructor, Copy Constructor, Assignment Operator</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week3 Discussion 2E.pdf">Week 3: Linked Lists</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week4 Discussion 2E.pdf">Week 4: Stacks, Queues</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week5 Discussion 2E.pdf">Week 5: Inheritance, Polymorphism, Recursion</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week6 Discussion 2E.pdf">Week 6: Templates, STL</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week7 Discussion 2E.pdf">Week 7: Algorithm Analysis, Sorting</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week8 Discussion 2E.pdf">Week 8: Trees, BST</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week9 Discussion 2E.pdf">Week 9: Hash Tables</a></li>
+        <li><a href="./static/teaching/w23_cs32/Week10 Discussion 2E.pdf">Week 10: Heaps, Priority Queues</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>Srinath Naik Ajmeera</p>
+</footer>
 
 </body>
 </html>
