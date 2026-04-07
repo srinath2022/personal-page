@@ -37,7 +37,10 @@
   <div class="inner">
     <img src="./static/images/2.jpg" alt="Srinath Naik" class="hero-photo">
     <div class="hero-text">
-      <h1>Srinath Naik Ajmeera</h1>
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">Srinath Naik Ajmeera</h1>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      </div>
       <p class="subtitle">ML Engineer &middot; Mountain View, CA</p>
       <p class="tagline">
         Building high-performance inference systems for LLMs and NLP models.
@@ -56,17 +59,14 @@
 <section id="about">
   <div class="inner">
     <p class="section-label">About</p>
-    <p>
-      I'm an ML Engineer at <strong>Moveworks</strong>, where I build and optimize inference infrastructure
-      for large language models and NLP systems. Before that I was at <strong>Amazon</strong>—working on
-      AWS Bedrock custom model hosting and Amazon One palm-recognition devices—and at <strong>Apple</strong>
-      on identity and access management.
-    </p>
-    <p>
-      I hold an MS in Computer Science from UCLA and a B.Tech from IIT Bombay.
-      My interests sit at the intersection of ML systems and applied research: scalable LLM serving,
-      inference optimization, and computer vision.
-    </p>
+    <div class="about-para-wrap">
+      <p class="about-para">I'm an ML Engineer at <strong>Moveworks</strong>, where I build and optimize inference infrastructure for large language models and NLP systems. Before that I was at <strong>Amazon</strong>—working on AWS Bedrock custom model hosting and Amazon One palm-recognition devices—and at <strong>Apple</strong> on identity and access management.</p>
+      <canvas class="about-canvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="about-para-wrap">
+      <p class="about-para">I hold an MS in Computer Science from UCLA and a B.Tech from IIT Bombay. My interests sit at the intersection of ML systems and applied research: scalable LLM serving, inference optimization, and computer vision.</p>
+      <canvas class="about-canvas" aria-hidden="true"></canvas>
+    </div>
   </div>
 </section>
 
@@ -125,10 +125,15 @@
   </div>
 </section>
 
+<canvas id="space-canvas" aria-hidden="true"></canvas>
+
 <footer>
   <p>Srinath Naik Ajmeera</p>
 </footer>
 
+<script type="module" src="./static/js/hero-effect.js"></script>
+<script type="module" src="./static/js/about-effect.js"></script>
+<script type="module" src="./static/js/space.js"></script>
 <script>
   document.querySelectorAll('.email-link').forEach(function(el) {
     var e = el.dataset.u + '@' + el.dataset.d;
