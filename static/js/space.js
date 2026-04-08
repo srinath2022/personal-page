@@ -8,7 +8,7 @@ const MOON_A      = 80;
 const MOON_B      = 48;
 const MOON_PERIOD = 14;   // seconds per orbit
 
-const MARS_R    = 38;
+const MARS_R    = 21;
 const ROCKET_OA = 64;     // rocket orbit semi-major
 const ROCKET_OB = 38;
 
@@ -21,6 +21,11 @@ const T_TOTAL = T_EARTH + T_OUT + T_MARS + T_BACK; // 60 s
 
 // ── Canvas ─────────────────────────────────────────────────────────────────
 const canvas = document.getElementById('space-canvas');
+const IS_MOBILE = window.matchMedia('(max-width: 640px)').matches;
+if (IS_MOBILE) {
+  canvas.style.display = 'none';
+  throw 0; // abort module on mobile — leave roverState at its inert default
+}
 const ctx    = canvas.getContext('2d');
 const dpr    = Math.min(window.devicePixelRatio || 1, 2);
 
@@ -266,6 +271,9 @@ function drawRocket(x, y, angle, scale) {
 }
 
 // ── Trail — persists full loop, clears only on loop restart ───────────────
+// Trail points are stored in DOCUMENT coordinates (y includes scrollY) so they
+// stay attached to Earth/Mars (which are anchored to #hero / #about via
+// getBoundingClientRect, i.e. they also live in document space).
 const trail = [];
 const TRAIL_MAX = 3600;  // 60fps × 60s = full loop
 let lastLoopIdx = 0;
@@ -275,12 +283,13 @@ function pushTrail(x, y, loopIdx) {
     trail.length = 0;
     lastLoopIdx = loopIdx;
   }
-  trail.push({ x, y });
+  trail.push({ x, y: y + window.scrollY });
   if (trail.length > TRAIL_MAX) trail.shift();
 }
 
 function drawTrail() {
   if (trail.length < 2) return;
+  const sy = window.scrollY;
   ctx.save();
   ctx.setLineDash([3, 7]);
   ctx.lineWidth = 1;
@@ -289,8 +298,8 @@ function drawTrail() {
     const alpha = 0.04 + 0.12 * (i / trail.length);
     ctx.strokeStyle = `rgba(180,180,180,${alpha.toFixed(3)})`;
     ctx.beginPath();
-    ctx.moveTo(trail[i-1].x, trail[i-1].y);
-    ctx.lineTo(trail[i].x,   trail[i].y);
+    ctx.moveTo(trail[i-1].x, trail[i-1].y - sy);
+    ctx.lineTo(trail[i].x,   trail[i].y   - sy);
     ctx.stroke();
   }
   ctx.setLineDash([]);
