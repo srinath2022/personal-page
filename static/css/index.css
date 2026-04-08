@@ -100,7 +100,7 @@ section { padding: 5rem 2rem; }
 }
 
 .section-label {
-  font-size: 0.7rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -274,6 +274,77 @@ section { padding: 5rem 2rem; }
   line-height: 1.6;
 }
 
+/* ── EXPERIENCE ── */
+#experience { padding-top: 1.5rem; padding-bottom: 2rem; }
+#about { padding-bottom: 2rem; }
+#projects { padding-top: 1.5rem; }
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exp-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.exp-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 14px rgba(45, 58, 140, 0.07);
+}
+
+.exp-company {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.exp-role {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.55rem;
+}
+
+.exp-desc {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.exp-subs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.exp-sub-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.exp-loc {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.85rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+
 /* ── BLOG ── */
 #blog {
   background: var(--surface);
@@ -437,5 +508,11 @@ footer {
 
   .projects-grid { grid-template-columns: 1fr; }
 
+  .experience-grid { grid-template-columns: 1fr; }
+
   .library-grid { grid-template-columns: 1fr; }
+
+  #space-canvas,
+  #hero-canvas,
+  .about-canvas { display: none !important; }
 }

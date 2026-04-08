@@ -3,6 +3,9 @@ import { prepareWithSegments, layoutWithLines } from 'https://esm.sh/@chenglou/p
 const h1 = document.querySelector('.hero-title');
 const canvas = document.getElementById('hero-canvas');
 if (!h1 || !canvas) throw new Error('hero elements missing');
+if (window.matchMedia('(max-width: 640px)').matches) {
+  throw 0; // mobile: leave h1 visible, skip canvas effect
+}
 
 const ctx = canvas.getContext('2d');
 const dpr = Math.min(window.devicePixelRatio || 1, 2);

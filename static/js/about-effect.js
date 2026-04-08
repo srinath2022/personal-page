@@ -3,6 +3,9 @@ import { prepareWithSegments, layoutNextLine } from 'https://esm.sh/@chenglou/pr
 const paras   = document.querySelectorAll('.about-para');
 const canvases = document.querySelectorAll('.about-canvas');
 if (!paras.length) throw new Error('about-para elements missing');
+if (window.matchMedia('(max-width: 640px)').matches) {
+  throw 0; // mobile: leave paragraphs visible, skip canvas effect
+}
 
 let globalMouseX = -9999;
 let globalMouseY = -9999;
