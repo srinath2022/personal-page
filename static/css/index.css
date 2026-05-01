@@ -46,7 +46,6 @@ nav {
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--text);
-  margin-right: auto;
 }
 
 .nav-links {
@@ -62,6 +61,19 @@ nav {
 }
 
 .nav-links a:hover { color: var(--accent); }
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.15s;
+  line-height: 0;
+}
+
+.nav-icon:hover { color: var(--accent); }
+
+.nav-icon svg { display: block; }
 
 .nav-sep {
   width: 1px;
@@ -381,11 +393,32 @@ section { padding: 5rem 2rem; }
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid var(--border);
-  padding: 1.5rem 2rem;
+  padding: 2rem 2rem 1.5rem;
   text-align: center;
   font-size: 0.78rem;
   color: var(--muted);
 }
+
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 0.82rem;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: var(--accent); }
 
 /* ── SECONDARY PAGES (resources, teaching) ── */
 
@@ -473,6 +506,144 @@ footer {
 
 .teaching-group li a:hover { opacity: 0.7; text-decoration: underline; }
 
+/* ── CREATIVE PAGE ── */
+.creative-feed { padding: 3rem 2rem; }
+
+.creative-feed .inner { max-width: 960px; }
+
+.journal-grid {
+  columns: 2;
+  column-gap: 1.5rem;
+}
+
+.journal-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.journal-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 14px rgba(45, 58, 140, 0.07);
+}
+
+.journal-photo-wrap {
+  background: var(--surface);
+  line-height: 0;
+}
+
+.journal-photo {
+  width: 100%;
+  display: block;
+}
+
+.journal-body {
+  padding: 1.15rem 1.25rem 1.25rem;
+}
+
+.journal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.journal-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.journal-meta-sep { color: var(--border); }
+
+.journal-exif {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  color: var(--muted);
+  background: var(--surface);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.exif-sep {
+  color: var(--border);
+  font-weight: 300;
+}
+
+.exif-device {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.journal-trip {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.journal-story {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.journal-story p + p { margin-top: 0.75rem; }
+
+.journal-pub {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: rgba(45, 58, 140, 0.03);
+}
+
+.journal-pub-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.journal-pub-venue {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.journal-pub-venue:hover { opacity: 0.7; }
+
+.journal-pub-date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+
+.journal-pub-screenshot {
+  margin-top: 0.75rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .hamburger { display: flex; }
@@ -511,6 +682,9 @@ footer {
   .experience-grid { grid-template-columns: 1fr; }
 
   .library-grid { grid-template-columns: 1fr; }
+
+  .journal-grid { columns: 1; }
+  .journal-exif { font-size: 0.72rem; }
 
   #space-canvas,
   #hero-canvas,
