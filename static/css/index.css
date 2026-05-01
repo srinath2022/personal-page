@@ -644,6 +644,41 @@ footer {
   border: 1px solid var(--border);
 }
 
+.journal-like {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 0.82rem;
+  padding: 0.25rem 0;
+  transition: color 0.15s;
+}
+
+.like-btn:hover { color: #e25555; }
+
+.like-btn.liked {
+  color: #e25555;
+}
+
+.like-btn.liked .like-icon {
+  fill: #e25555;
+  stroke: #e25555;
+}
+
+.like-count {
+  font-weight: 600;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .hamburger { display: flex; }
