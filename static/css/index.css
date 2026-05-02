@@ -291,6 +291,28 @@ section { padding: 5rem 2rem; }
 #about { padding-bottom: 2rem; }
 #projects { padding-top: 1.5rem; }
 
+.exp-group-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-group-label:first-of-type { margin-top: 0.25rem; }
+
+.exp-link {
+  color: var(--accent);
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.exp-link:hover { opacity: 0.7; text-decoration: underline; }
+
 .experience-grid {
   display: flex;
   flex-direction: column;

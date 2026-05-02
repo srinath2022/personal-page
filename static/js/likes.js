@@ -26,21 +26,34 @@ function saveLikedSet(s) {
   localStorage.setItem("liked", JSON.stringify([...s]));
 }
 
-// Load initial counts and liked state
-function initLikes() {
+function waitForCards() {
+  return new Promise(function (resolve) {
+    function check() {
+      if (document.querySelector(".like-btn")) {
+        resolve();
+      } else {
+        setTimeout(check, 100);
+      }
+    }
+    check();
+  });
+}
+
+async function initLikes() {
+  await waitForCards();
+
   var liked = getLikedSet();
 
   // Mark already-liked buttons
   document.querySelectorAll(".like-btn").forEach(function (btn) {
-    var id = btn.dataset.id;
-    if (liked.has(id)) {
+    if (liked.has(btn.dataset.id)) {
       btn.classList.add("liked");
     }
   });
 
   // Fetch counts from Firebase
-  var likesRef = ref(db, "likes");
-  get(likesRef).then(function (snapshot) {
+  try {
+    var snapshot = await get(ref(db, "likes"));
     var data = snapshot.val() || {};
     document.querySelectorAll(".like-count").forEach(function (el) {
       var id = el.dataset.id;
@@ -48,7 +61,9 @@ function initLikes() {
         el.textContent = data[id];
       }
     });
-  });
+  } catch (err) {
+    console.error("Firebase read failed:", err);
+  }
 
   // Handle clicks
   document.addEventListener("click", function (e) {
@@ -58,7 +73,7 @@ function initLikes() {
     var id = btn.dataset.id;
     var liked = getLikedSet();
 
-    if (liked.has(id)) return; // already liked
+    if (liked.has(id)) return;
 
     liked.add(id);
     saveLikedSet(liked);
@@ -72,15 +87,10 @@ function initLikes() {
       if (countEl) {
         countEl.textContent = result.snapshot.val();
       }
+    }).catch(function (err) {
+      console.error("Firebase write failed:", err);
     });
   });
 }
 
-// Wait for creative.js to render the cards
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(initLikes, 50);
-  });
-} else {
-  setTimeout(initLikes, 50);
-}
+initLikes();

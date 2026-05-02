@@ -22,7 +22,7 @@
     </button>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
+      <!-- <a href="#projects">Projects</a> -->
       <a href="#contact">Contact</a>
       <a href="creative.html">Creative</a>
       <div class="nav-sep"></div>
@@ -45,7 +45,7 @@
         <h1 class="hero-title">Srinath Naik Ajmeera</h1>
         <canvas id="hero-canvas" aria-hidden="true"></canvas>
       </div>
-      <p class="subtitle">ML Engineer &middot; Mountain View, CA</p>
+      <p class="subtitle">Senior ML Engineer &middot; Mountain View, CA</p>
       <p class="tagline">
         Building high-performance inference systems for LLMs and NLP models.
         Interested in ML systems, efficient serving, and computer vision.
@@ -59,7 +59,7 @@
   <div class="inner">
     <p class="section-label">About</p>
     <div class="about-para-wrap">
-      <p class="about-para">I'm an ML Engineer at <strong>Moveworks</strong>, where I build and optimize inference infrastructure for large language models and NLP systems. Before that I was at <strong>Amazon</strong>—working on AWS Bedrock custom model hosting and Amazon One palm-recognition devices—and at <strong>Apple</strong> on identity and access management.</p>
+      <p class="about-para">I'm a Senior ML Engineer at <strong>Moveworks (now ServiceNow)</strong>, where I build and optimize inference infrastructure for large language models and NLP systems. Before that I was at <strong>Amazon</strong>—working on AWS Bedrock custom model hosting and Amazon One palm-recognition devices—and at <strong>Apple</strong> on identity and access management.</p>
       <canvas class="about-canvas" aria-hidden="true"></canvas>
     </div>
     <div class="about-para-wrap">
@@ -73,7 +73,16 @@
 <section id="experience">
   <div class="inner">
     <p class="section-label">Experience</p>
+
+    <p class="exp-group-label">Industry</p>
     <div class="experience-grid">
+
+      <div class="exp-card">
+        <p class="exp-company">Moveworks (now ServiceNow)</p>
+        <h3 class="exp-role">Senior ML Engineer</h3>
+        <p class="exp-desc">Own the inference infrastructure powering Moveworks' LLM and NLP systems — designing and optimizing the serving stack for low-latency, high-throughput model execution at scale.</p>
+        <p class="exp-loc">Mountain View, CA</p>
+      </div>
 
       <div class="exp-card">
         <p class="exp-company">Amazon</p>
@@ -81,35 +90,47 @@
         <div class="exp-subs">
           <div class="exp-sub">
             <p class="exp-sub-label">AWS Bedrock</p>
-            <p class="exp-desc">Contributed to the Custom Model Import platform, the AWS service responsible for hosting and serving customer-supplied large language models, with a focus on the inference layer and the model-onboarding workflow.</p>
+            <p class="exp-desc">Built the inference layer and model-onboarding pipeline for Custom Model Import — the AWS Bedrock service that lets customers bring their own large language models into fully managed, production-grade hosting.</p>
           </div>
           <div class="exp-sub">
             <p class="exp-sub-label">Amazon One</p>
-            <p class="exp-desc">Contributed to Amazon One, the palm-recognition payment system, working on the on-device image-processing pipeline that powers its biometric capture stack.</p>
+            <p class="exp-desc">Designed the on-device image-processing pipeline for Amazon One, the palm-recognition payment system — optimizing the biometric capture stack that runs in real time on edge hardware.</p>
           </div>
         </div>
         <p class="exp-loc">Seattle, WA</p>
       </div>
 
       <div class="exp-card">
+        <p class="exp-company">Apple</p>
+        <h3 class="exp-role">Software Engineer, Identity Management Services</h3>
+        <p class="exp-desc">Owned core surfaces of RAMP (Registration, Access Management &amp; Provisioning) — Apple's enterprise-wide system of record for access control — driving design and implementation across platform and business-facing workflows.</p>
+        <p class="exp-loc">Hyderabad, India</p>
+      </div>
+
+    </div>
+
+    <p class="exp-group-label">Academic</p>
+    <div class="experience-grid">
+
+      <div class="exp-card">
         <p class="exp-company">UCLA — Visual Machines Group</p>
         <h3 class="exp-role">Graduate Student Researcher</h3>
-        <p class="exp-desc">Worked within the Visual Machines Group on applied computer vision research, contributing to image-restoration and physics-guided learning prototypes developed inside the lab's experimental research stack.</p>
+        <p class="exp-desc">Developed image-restoration models and physics-guided learning techniques for computational photography, publishing research on inverse-problem solvers within the lab's experimental pipeline.</p>
         <p class="exp-loc">Los Angeles, CA</p>
       </div>
 
       <div class="exp-card">
-        <p class="exp-company">Apple</p>
-        <h3 class="exp-role">Software Engineer, Identity Management Services</h3>
-        <p class="exp-desc">Contributed to the Registration, Access Management &amp; Provisioning (RAMP) platform — the internal system of record for access control across Apple's enterprise application suite — collaborating with platform and business teams on its core access-management surfaces.</p>
-        <p class="exp-loc">Hyderabad, India</p>
+        <p class="exp-company">UCLA — Computer Science</p>
+        <h3 class="exp-role">Graduate Teaching Assistant</h3>
+        <p class="exp-desc">Led discussion sections for CS 31 &amp; CS 32 (Introduction to Computer Science I &amp; II, C++), designing weekly teaching material and guiding students through core programming concepts. <a href="teaching.html" class="exp-link">View teaching material &rarr;</a></p>
+        <p class="exp-loc">Los Angeles, CA</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Projects -->
+<!-- Projects (hidden for now — revive when launched projects/publications are ready)
 <section id="projects">
   <div class="inner">
     <p class="section-label">Projects &amp; Research</p>
@@ -143,6 +164,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- Blog -->
 <section id="blog">
