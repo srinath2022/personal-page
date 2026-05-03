@@ -122,6 +122,12 @@ function transitEase(u) {
   return 0.05 + (u - 0.1) * (0.95 / 0.90);
 }
 
+// ── Planet images ──────────────────────────────────────────────────────────
+const earthImg = new Image();
+earthImg.src = './static/images/earth_sphere.png';
+const marsImg = new Image();
+marsImg.src = './static/images/mars_sphere.png';
+
 // ── Drawing: Earth ─────────────────────────────────────────────────────────
 function drawEarth(cx, cy) {
   // Atmospheric glow
@@ -131,35 +137,18 @@ function drawEarth(cx, cy) {
   ctx.fillStyle = glow;
   ctx.beginPath(); ctx.arc(cx, cy, EARTH_R*1.45, 0, Math.PI*2); ctx.fill();
 
-  // Pale blue body
-  const body = ctx.createRadialGradient(cx - EARTH_R*0.30, cy - EARTH_R*0.30, 0, cx, cy, EARTH_R);
-  body.addColorStop(0,    '#b8dff0');  // icy pale highlight
-  body.addColorStop(0.38, '#5da8cc');  // sky blue
-  body.addColorStop(0.72, '#2b6a9a');  // ocean mid
-  body.addColorStop(1,    '#14355a');  // dark limb
-  ctx.fillStyle = body;
-  ctx.beginPath(); ctx.arc(cx, cy, EARTH_R, 0, Math.PI*2); ctx.fill();
-
-  // Clipped interior: soft green land wash + cloud glow
-  ctx.save();
-  ctx.beginPath(); ctx.arc(cx, cy, EARTH_R, 0, Math.PI*2); ctx.clip();
-  ctx.translate(cx, cy);
-
-  // Soft green wash (no distinct shapes)
-  const landGrad = ctx.createRadialGradient(-EARTH_R*0.18, EARTH_R*0.08, 0, -EARTH_R*0.18, EARTH_R*0.08, EARTH_R*0.48);
-  landGrad.addColorStop(0, 'rgba(90,160,75,0.36)');
-  landGrad.addColorStop(1, 'rgba(90,160,75,0)');
-  ctx.fillStyle = landGrad;
-  ctx.fillRect(-EARTH_R, -EARTH_R, EARTH_R*2, EARTH_R*2);
-
-  // Soft cloud glow (upper right)
-  const cloudGrad = ctx.createRadialGradient(EARTH_R*0.12, -EARTH_R*0.32, 0, EARTH_R*0.12, -EARTH_R*0.32, EARTH_R*0.52);
-  cloudGrad.addColorStop(0, 'rgba(255,255,255,0.26)');
-  cloudGrad.addColorStop(1, 'rgba(255,255,255,0)');
-  ctx.fillStyle = cloudGrad;
-  ctx.fillRect(-EARTH_R, -EARTH_R, EARTH_R*2, EARTH_R*2);
-
-  ctx.restore();
+  if (earthImg.complete && earthImg.naturalWidth > 0) {
+    ctx.drawImage(earthImg, cx - EARTH_R, cy - EARTH_R, EARTH_R * 2, EARTH_R * 2);
+  } else {
+    // Fallback gradient
+    const body = ctx.createRadialGradient(cx - EARTH_R*0.30, cy - EARTH_R*0.30, 0, cx, cy, EARTH_R);
+    body.addColorStop(0, '#b8dff0');
+    body.addColorStop(0.38, '#5da8cc');
+    body.addColorStop(0.72, '#2b6a9a');
+    body.addColorStop(1, '#14355a');
+    ctx.fillStyle = body;
+    ctx.beginPath(); ctx.arc(cx, cy, EARTH_R, 0, Math.PI*2); ctx.fill();
+  }
 }
 
 // ── Drawing: Moon (crescent) ───────────────────────────────────────────────
@@ -187,14 +176,18 @@ function drawMars(cx, cy) {
   ctx.fillStyle = glow;
   ctx.beginPath(); ctx.arc(cx, cy, MARS_R*1.4, 0, Math.PI*2); ctx.fill();
 
-  // Light dusty terracotta body
-  const body = ctx.createRadialGradient(cx - MARS_R*0.28, cy - MARS_R*0.28, 0, cx, cy, MARS_R);
-  body.addColorStop(0,    '#edc4a8');  // pale dusty highlight
-  body.addColorStop(0.38, '#c47850');  // warm terracotta
-  body.addColorStop(0.72, '#8a4020');  // deeper rust
-  body.addColorStop(1,    '#401808');  // dark limb
-  ctx.fillStyle = body;
-  ctx.beginPath(); ctx.arc(cx, cy, MARS_R, 0, Math.PI*2); ctx.fill();
+  if (marsImg.complete && marsImg.naturalWidth > 0) {
+    ctx.drawImage(marsImg, cx - MARS_R, cy - MARS_R, MARS_R * 2, MARS_R * 2);
+  } else {
+    // Fallback gradient
+    const body = ctx.createRadialGradient(cx - MARS_R*0.28, cy - MARS_R*0.28, 0, cx, cy, MARS_R);
+    body.addColorStop(0, '#edc4a8');
+    body.addColorStop(0.38, '#c47850');
+    body.addColorStop(0.72, '#8a4020');
+    body.addColorStop(1, '#401808');
+    ctx.fillStyle = body;
+    ctx.beginPath(); ctx.arc(cx, cy, MARS_R, 0, Math.PI*2); ctx.fill();
+  }
 }
 
 // ── Drawing: Rocket ────────────────────────────────────────────────────────
